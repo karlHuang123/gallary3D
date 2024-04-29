@@ -1,0 +1,51 @@
+.bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  background-image: var(--bg-mobile);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pxBtns {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pxBtn {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #888;
+  cursor: pointer;
+}
+.backup {
+  position: fixed;
+  bottom: 20px;
+  right: 20%;
+}
+
+@media (min-width: 922px) {
+  .bg {
+    background-image: var(--bg-desktop);
+  }
+  .pxBtns {
+    left: 80%;
+  }
+}

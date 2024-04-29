@@ -1,0 +1,105 @@
+.container {
+  margin-bottom: 40px;
+}
+
+.imgWrapper {
+  display: block;
+  width: 100%;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
+  min-width: 352px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.avatar {
+  margin-right: 8px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info {
+  flex: 1;
+  height: 48px;
+}
+
+.name {
+  color: #101010;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.org {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orgName {
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #101010;
+}
+
+.operation {
+  display: flex;
+}
+
+.view,
+.like {
+  display: flex;
+  align-items: center;
+  height: 14px;
+  font-size: 12px;
+  margin-right: 24px;
+}
+
+.view {
+  margin-right: 24px;
+}
+
+.view::before,
+.like::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+}
+
+.view::before {
+  background: url(../../imgs/sort.png) no-repeat 0 0 / cover;
+}
+
+.like::before {
+  background: url(../../imgs/sort.png) no-repeat -28px 0 / cover;
+}
+
+@media (min-width: 922px) {
+  .container {
+    padding: 20px 10px;
+    margin-bottom: 0;
+  }
+
+  .img {
+    width: 100%;
+    border-radius: 12px;
+    min-width: initial;
+  }
+}

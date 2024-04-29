@@ -1,0 +1,46 @@
+{
+  "name": "gallery3d",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "resolve": "tsc --traceResolution",
+    "preview": "vite preview",
+    "deploy:vmrm": "ssh haohu1@192.168.59.128 \"rm -rf /var/www/fe-gallery/dist\"",
+    "deploy:vmscp": "scp -r .\\dist haohu1@192.168.59.128:/var/www/fe-gallery",
+    "deploy:vm": "npm run deploy:vmrm && npm run deploy:vmscp",
+    "deploy:rm": "ssh root@47.102.125.150 \"rm -rf /var/www/fe-gallery/dist\"",
+    "deploy:scp": "scp -r .\\dist root@47.102.125.150:/var/www/fe-gallery",
+    "deploy": "npm run deploy:rm && npm run deploy:scp"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.3.4",
+    "@tanstack/react-query-devtools": "^4.3.5",
+    "axios": "^0.27.2",
+    "gsap": "^3.11.0",
+    "html-to-image": "^1.10.8",
+    "lil-gui": "^0.17.0",
+    "lodash": "^4.17.21",
+    "qrcode": "^1.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-lazy-load-image-component": "^1.5.5",
+    "react-router-dom": "^6.3.0",
+    "swiper": "^8.3.2",
+    "three": "^0.143.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.185",
+    "@types/node": "^18.7.18",
+    "@types/qrcode": "^1.5.0",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-lazy-load-image-component": "^1.5.2",
+    "@types/three": "^0.144.0",
+    "@vitejs/plugin-react": "^2.0.0",
+    "typescript": "^4.8.3",
+    "vite": "^3.0.0"
+  }
+}

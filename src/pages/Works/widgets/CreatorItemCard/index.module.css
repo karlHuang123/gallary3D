@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+  min-width: 100px;
+  padding-top: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+  padding: 0 5px;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 922px) {
+  .container {
+    border-radius: 50%;
+    overflow: visible;
+    margin-bottom: 20px;
+  }
+
+  .name {
+    bottom: -40px;
+    background: transparent;
+    color: #737373;
+    font-size: 20px;
+    text-align: center;
+  }
+}

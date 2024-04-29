@@ -1,0 +1,264 @@
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #000;
+  --banner-height: 128px;
+}
+
+.banner,
+.dBanner {
+  height: var(--banner-height);
+  background: url(./imgs/banner.jpg) no-repeat center/cover;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 58px;
+}
+
+.all {
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #101010;
+  font-weight: bold;
+}
+
+.btnCatalog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  height: 32px;
+  border: 1px solid #bbb;
+  border-radius: 16px;
+}
+
+.body {
+  flex: 1;
+  padding: 0 20px;
+  overflow-y: scroll;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  flex: 1;
+  padding: 6px 0 20px;
+  line-height: 20px;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+}
+
+.tab[data-active='true'] {
+  border-bottom: 2px solid #4271ef;
+}
+
+.nomore {
+  height: 50px;
+  color: #969799;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 50px;
+}
+
+.categoryWrapper {
+  position: absolute;
+  top: var(--banner-height);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.categoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 16px;
+}
+
+.select {
+  color: #a8a8a8;
+  font-size: 14px;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  color: #101010;
+  font-size: 14px;
+}
+
+.categories {
+  overflow-y: scroll;
+  flex: 1;
+  padding: 0 16px 60px;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.categoryName {
+  color: #000;
+  font-size: 26px;
+}
+
+.categoryWorkNum {
+  color: #a8a8a8;
+  font-size: 14px;
+}
+
+.dCatalog {
+  position: absolute;
+  display: none;
+  width: 530px;
+}
+
+.desktopBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  width: 50px;
+  border-left: 1px solid #646566;
+}
+
+.dItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 122px;
+  word-break: break-all;
+  font-size: 18px;
+  color: #a8a8a8;
+  border-bottom: 1px solid #646566;
+  cursor: pointer;
+}
+
+.dItem > .dBtn {
+  width: 18px;
+}
+
+.dItem[data-active='true'] {
+  color: #000;
+}
+
+.eye {
+  width: 24px;
+  height: 24px;
+  background: url(./imgs/sort.png) no-repeat 0 0 / cover;
+}
+
+.dItem[data-active='true'] > .eye {
+  background-position: -24px 0;
+}
+
+.heart {
+  width: 24px;
+  height: 24px;
+  background: url(./imgs/sort.png) no-repeat calc(-2 * 24px) 0 / cover;
+}
+
+.dItem[data-active='true'] > .heart {
+  background-position: -72px 0;
+}
+
+.dItem[data-active='true'] {
+  color: #000;
+}
+.backup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media (min-width: 922px) {
+  .tabs,
+  .title,
+  .nomore,
+  .banner {
+    display: none;
+  }
+
+  .dCatalog {
+    display: block;
+  }
+
+  .dBanner {
+    display: block;
+  }
+
+  .dCatalogTitle {
+    position: absolute;
+    top: 200px;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 24px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .dCatalogList {
+    position: absolute;
+    top: 200px;
+    left: 160px;
+    padding-top: 8px;
+  }
+
+  .dCategory {
+    box-sizing: border-box;
+    font-size: 30px;
+    color: #a8a8a8;
+    cursor: pointer;
+    line-height: 36px;
+    padding-left: 32px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .dCategory[data-active='true'],
+  .dCategory:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+  }
+
+  .body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 530px;
+    right: 50px;
+  }
+
+  .desktopBar {
+    display: flex;
+  }
+}

@@ -1,0 +1,78 @@
+.container {
+  position: relative;
+  margin: 32px 20px;
+}
+
+.infomation {
+  position: absolute;
+  width: 240px;
+}
+
+.name {
+  color: #101010;
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 20px;
+}
+
+.org {
+  color: #101010;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+.degree,
+.info {
+  color: #101010;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 8px;
+}
+
+.avatar {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .avatar {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 272px; /* px-to-viewport-ignore */
+    height: 272px; /* px-to-viewport-ignore */
+  }
+
+  .infomation {
+    top: 400px; /* px-to-viewport-ignore */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .name {
+    font-size: 28px; /* px-to-viewport-ignore */
+    line-height: 34px; /* px-to-viewport-ignore */
+    margin-bottom: 20px; /* px-to-viewport-ignore */
+  }
+
+  .org {
+    font-size: 12px; /* px-to-viewport-ignore */
+    line-height: 16px; /* px-to-viewport-ignore */
+    margin-bottom: 8px; /* px-to-viewport-ignore */
+  }
+
+  .degree,
+  .info {
+    font-size: 12px; /* px-to-viewport-ignore */
+    line-height: 14px; /* px-to-viewport-ignore */
+    margin-bottom: 8px; /* px-to-viewport-ignore */
+  }
+}

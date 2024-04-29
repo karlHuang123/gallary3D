@@ -1,0 +1,84 @@
+.experience {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  background-image: var(--bg-mobile);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pxEnterButton {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #888;
+  cursor: pointer;
+}
+
+.pxIconMenu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background-image: url('@/assets/icon_menu.92c5f94f.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pxTopLeft {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.pxViewNum {
+  color: #222;
+}
+
+.pxLeftArrow {
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  background-image: url('@/assets/left.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.backup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media (min-width: 922px) {
+  .cover {
+    background-image: var(--bg-desktop);
+  }
+}

@@ -1,0 +1,61 @@
+.orderBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  --btn-size: 20px;
+}
+
+.orderByView,
+.orderByLike {
+  display: flex;
+  padding: 0 24px;
+}
+
+.orderByView {
+  border-right: 1px solid #ccc;
+}
+
+.orderByView::before,
+.orderByView::after,
+.orderByLike::before,
+.orderByLike::after {
+  content: '';
+  display: block;
+  width: var(--btn-size);
+  height: var(--btn-size);
+}
+
+.orderByView::before {
+  background: url(../../imgs/sort.png) no-repeat 0 0 / cover;
+}
+
+.orderByView[data-active='true']::before {
+  background-position: calc(-1 * var(--btn-size)) 0;
+}
+
+.orderByLike::before {
+  background: url(../../imgs/sort.png) no-repeat calc(-2 * var(--btn-size)) 0 /
+    cover;
+}
+
+.orderByLike[data-active='true']::before {
+  background-position: calc(-3 * var(--btn-size)) 0;
+}
+
+.orderByView::after,
+.orderByLike::after {
+  background: url(../../imgs/sort.png) no-repeat calc(-4 * var(--btn-size)) 0 /
+    cover;
+}
+
+@media (min-width: 922px) {
+  .orderBtns {
+    display: none;
+  }
+
+  .listWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}

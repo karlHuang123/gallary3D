@@ -1,0 +1,170 @@
+#bottom-info {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+@media only screen and (max-width: 800px) {
+  #bottom-info {
+    width: 100%;
+  }
+}
+
+#bottom-show {
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  background-image: url('/assets/vtourskin_light.30a10228.png');
+  background-size: 64px 384px;
+  background-position: -32px -224px;
+  visibility: hidden;
+}
+
+.swiper {
+  height: 80px;
+  width: 100%;
+  transition: height 0.3s;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide-clicked {
+  border: 3px solid white;
+}
+
+.swiper-bottom-bar {
+  height: 100px;
+  width: 100%;
+}
+
+.swiper-btn-container {
+  height: 46px;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.swiper-btn {
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.swiper-btn-left {
+  background-image: url('/assets/vtourskin_light.30a10228.png');
+  background-size: 64px 384px;
+  background-position: 0 -32px;
+}
+
+.swiper-btn-list {
+  background-image: url('/assets/vtourskin_light.30a10228.png');
+  background-size: 64px 384px;
+  background-position: 0 -64px;
+}
+
+.swiper-btn-list::after {
+  content: '清单';
+  position: absolute;
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  top: 42px;
+  white-space: nowrap;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-btn-origin {
+  background-image: url('/assets/origin.99ef8c31.png');
+  background-size: contain;
+}
+
+.swiper-btn-origin::after {
+  content: '原点';
+  position: absolute;
+  top: 42px;
+  white-space: nowrap;
+  text-align: center;
+  left: 50%;
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  transform: translateX(-50%);
+}
+
+.swiper-btn-hide {
+  background-image: url('/assets/vtourskin_light.30a10228.png');
+  background-size: 64px 384px;
+  background-position: 0 -224px;
+}
+
+.swiper-btn-hide::after {
+  content: '隐藏';
+  display: block;
+  position: absolute;
+  top: 42px;
+  white-space: nowrap;
+  text-align: center;
+  left: 50%;
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  transform: translateX(-50%);
+}
+
+.swiper-btn-gyroscope::before {
+  content: '';
+  display: block;
+  height: 100%;
+  background-image: url('/assets/vtourskin_light.30a10228.png');
+  background-size: 64px 384px;
+  background-position: 0 -192px;
+}
+
+.swiper-btn-gyroscope[data-enabled="false"]::before {
+  opacity: 0.4;
+}
+
+.swiper-btn-gyroscope::after {
+  content: '陀螺仪';
+  position: absolute;
+  top: 42px;
+  white-space: nowrap;
+  text-align: center;
+  left: 50%;
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  transform: translateX(-50%);
+}
+
+.swiper-btn-right {
+  background-image: url('/assets/vtourskin_light.30a10228.png');
+  background-size: 64px 384px;
+  background-position: -32px -32px;
+}

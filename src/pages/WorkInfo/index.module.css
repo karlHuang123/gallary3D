@@ -1,0 +1,147 @@
+.container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: #000;
+  font-size: 12px;
+}
+
+.topBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+  padding: 0 15px 0 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+}
+
+.navBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #fff;
+  border-top: 1px solid #f1f1f1;
+}
+
+.navBtn {
+  color: #646566;
+  flex: 1;
+}
+
+.navBtn[data-active='true'] {
+  filter: drop-shadow(5px 5px 3px #aaa);
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 22px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.icon[data-home] {
+  background-image: url(./imgs/home.png);
+}
+
+.icon[data-author] {
+  background-image: url(./imgs/author1.png);
+}
+
+.icon[data-work] {
+  background-image: url(./imgs/work.png);
+}
+
+.icon[data-exh] {
+  background-image: url(./imgs/exhibition.png);
+}
+
+.text {
+  margin-top: 4px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.desktopBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  width: 50px;
+  border-left: 1px solid #646566;
+}
+
+.dItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 122px;
+  word-break: break-all;
+  font-size: 18px;
+  color: #a8a8a8;
+  border-bottom: 1px solid #646566;
+  cursor: pointer;
+}
+
+.dItem > div {
+  width: 18px;
+}
+
+.dItem[data-active='true'] {
+  color: #000;
+}
+
+.outletWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  bottom: 50px;
+}
+
+.outletWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 922px) {
+  .mobileBar {
+    display: none;
+  }
+  .desktopBar {
+    display: flex;
+  }
+  .outletWrapper {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50px;
+  }
+}
